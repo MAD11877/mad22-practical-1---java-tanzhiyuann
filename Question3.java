@@ -12,7 +12,9 @@ public class Question3
      
     Scanner in = new Scanner(System.in);
     int i = in.nextInt();
+    in.close();
     int total = i*i;
+    System.out.println(total);
     
   }
 }
