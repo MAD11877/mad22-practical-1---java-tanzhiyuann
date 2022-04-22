@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.List;
+import java.util.*;
 
 public class Question5
 {
@@ -27,6 +29,33 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
+    int numbers = in.nextInt();
+
+    ArrayList<Integer> list = new ArrayList<>();
+    for (int i = 0; i < numbers; i++){
+      list.add(in.nextInt());
+    }
+    in.close();
+    System.out.println(list);
+    int checkmode = 0;
+    int[] checked = {0};
+    
+    int index = 0;
+
+
+    
+
+    for (int i = 0; i < list.size(); i++){
+      for (int x = i; x < list.size(); x++){
+        checkmode = Collections.frequency(list, list.get(i));
+        
+      }
+      if (checkmode > checked[0]){
+        checked[0] = i;
+      }
+    }
+
+    System.out.println(list.get(checked[0]));
     
   }
 }
