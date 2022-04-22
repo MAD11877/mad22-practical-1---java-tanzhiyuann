@@ -36,13 +36,8 @@ public class Question5
       list.add(in.nextInt());
     }
     in.close();
-    System.out.println(list);
     int checkmode = 0;
     int[] checked = {0};
-    
-    int index = 0;
-
-
     
 
     for (int i = 0; i < list.size(); i++){
