@@ -37,7 +37,8 @@ public class Question5
     }
     in.close();
     int checkmode = 0;
-    int[] checked = {0};
+    int checked = 0;
+    int index = 0;
     
 
     for (int i = 0; i < list.size(); i++){
@@ -45,12 +46,15 @@ public class Question5
         checkmode = Collections.frequency(list, list.get(i));
         
       }
-      if (checkmode > checked[0]){
-        checked[0] = i;
+      if (checkmode > checked){
+        checked = checkmode;
+        //System.out.println("Checked: " + checked);
+        index = i;
+        //System.out.println("Index: " + index);
       }
     }
 
-    System.out.println(list.get(checked[0]));
+    System.out.println(list.get(index));
     
   }
 }
